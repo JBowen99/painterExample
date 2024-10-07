@@ -1,12 +1,15 @@
 ---
 import Layout from '~/layouts/Layout.astro';
 
-import { headerData, footerData } from '~/navigation';
+import { headerData, footerData, contactData } from '~/navigation';
 
 import type { MetaData } from '~/types';
 
 import FancyNavbar from '~/components/widgets/FancyNavbar.astro';
 import FooterFull from '~/components/widgets/FooterFull.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
+import HeaderBusiness from '~/components/widgets/HeaderBusiness.astro';
 
 export interface Props {
   metadata?: MetaData;
@@ -24,14 +27,14 @@ const links = [
 
 <Layout metadata={metadata}>
   <slot name="header">
-    <!-- <Header {...headerData} isSticky showRssFeed showToggleTheme /> -->
-    <FancyNavbar companyName="Silver Stag Studios" logo="true" isSticky={true} layout="left" links={links} />
+    <HeaderBusiness {...headerData} {...contactData} isSticky /> 
+    <!-- <FancyNavbar companyName="Silver Stag Studios" logo="true" isSticky={true} layout="left" links={links} /> -->
   </slot>
   <main>
     <slot />
   </main>
   <slot name="footer">
-    <!-- <Footer {...footerData} /> -->
-    <FooterFull />
+    <Footer {...footerData} />
+    <!-- <FooterFull /> -->
   </slot>
 </Layout>

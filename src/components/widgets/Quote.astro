@@ -1,0 +1,71 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Icon from 'node_modules/astro-icon/components/Icon.astro';
+---
+
+<!-- HeroText Widget ******************* -->
+
+<div class="flex flex-col lg:flex-row w-full lg:px-20">
+    <div
+      class="lg:w-1/2 flex flex-col justify-center lg:justify-start items-center lg:items-start pt-20 md:px-10 space-y-10 text-base md:text-2xl"
+    >
+      <HeroText tagline="">
+        <Fragment slot="title">
+          <div class="text-4xl">Get a Free Quote!</div>
+        </Fragment>
+
+        <Fragment slot="subtitle">
+          Reach out to us for a free estimate on your next project.
+        </Fragment>
+      </HeroText>
+
+      <div class="flex flex-row space-x-3 text-nowrap justify-start items-center">
+        <Icon name="tabler:mail" />
+        <h1>: info@SilverStagStudios.com</h1>
+      </div>
+      <div class="flex flex-row space-x-3 text-nowrap justify-start items-center">
+        <Icon name="tabler:phone" />
+        <h1>: (720) 663-9089</h1>
+      </div>
+      <div class="flex flex-row justify-center text-xl md:text-3xl space-x-5 lg:pr-10">
+        <span class="text-base md:text-2xl">Socials :</span>
+        <a href="https://instagram.com">
+          <Icon name="tabler:brand-instagram" />
+        </a>
+        <a href="facebook.com">
+          <Icon name="tabler:brand-facebook" />
+        </a>
+        <a href="instagram.com">
+          <Icon name="tabler:brand-x" />
+        </a>
+      </div>
+    </div>
+    <ContactUs
+      id="form"
+      title=""
+      subtitle=""
+      inputs={[
+        {
+          type: 'text',
+          name: 'name',
+          label: 'Name',
+        },
+        {
+          type: 'email',
+          name: 'email',
+          label: 'Email',
+        },
+      ]}
+      textarea={{
+        label: 'Message',
+      }}
+      disclaimer={{
+        label:
+          'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+      }}
+      description="Our support team typically responds within 24 business hours."
+    />
+  </div>

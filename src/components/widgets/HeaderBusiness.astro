@@ -115,15 +115,21 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                   </ul>
                 </>
               ) : (
+                
                 <a
+                  /*
                   class:list={[
                     'hover:text-link dark:hover:text-white px-4 py-3 flex items-center',
                     { 'aw-link-active': href === currentPath },
                   ]}
                   href={href}
+                  */
                 >
-                  {text}
-                </a>
+                  <button class="relative overflow-hidden bg-transparent text-black px-4 py-2 rounded-md group">
+                    <span class="relative z-10 text-nowrap">{text}</span>
+                    <div class="absolute inset-0 bg-[#ff5555] w-0 transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                  </button>
+                </a>        
               )}
             </li>
           ))

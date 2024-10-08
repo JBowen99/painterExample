@@ -24,16 +24,12 @@ const metadata = {
 import TreesSVG from '~/assets/trees.svg';
 import Features from '~/components/widgets/Features.astro';
 import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 ---
 
 <Layout metadata={metadata}>
+
   <div class="flex flex-col justify-center w-full">
-    <div class="text-red-500 bg-red-500">
-      <div
-        class="absolute inset-0 md:-bottom-32 bg-bottom bg-auto text-red-500 bg-custom-svg dark:bg-custom-svg2 opacity-100 z-[-1]"
-      >
-      </div>
-    </div>
     <div class="relative z-10 p-4">
       <div class="flex justify-center mt-10">
         <div class="w-1/3 flex justify-center">
@@ -42,18 +38,13 @@ import Features3 from '~/components/widgets/Features3.astro';
       </div>
 
       <HeroText>
-        <Fragment slot="title">
-          <span class="font-cinzel drop-shadow-2xl text-5xl"
-            ><span class="text-slate-500">Silver</span> Stag Studios</span
-          >
-        </Fragment>
 
-        <Fragment slot="subtitle"><span class="text-lg font-light">Building Modern Digital Legacies </span></Fragment>
+        <Fragment slot="subtitle"><span class="text-lg font-nomral">Your Go-To Painter Professionals</span></Fragment>
       </HeroText>
 
       <div class="flex flex-row justify-center space-x-3">
-        <Button text="Get Started" variant="secondary" class="bg-white dark:bg-transparent btn-shiny" href="/contact" />
-        <Button text="Learn More" variant="secondary" class="bg-white dark:bg-transparent btn-shiny" href="#features" />
+        <Button text="Get A Quote" variant="secondary" class="bg-white dark:bg-transparent btn-grow" href="/contact" />
+        <Button text="About Us" variant="secondary" class="bg-white dark:bg-transparent btn-grow" href="/about" />
       </div>
     </div>
   </div>
@@ -68,19 +59,19 @@ import Features3 from '~/components/widgets/Features3.astro';
     subtitle="Our team handcrafts modern, professional, and performant websites."
     items={[
       {
-        title: 'Mobile First Design',
-        description: 'Built from the ground up with mobile in mind, our sites look great on all phones.',
-        icon: 'tabler:device-mobile-heart',
+        title: 'Exterior Painting',
+        description: 'We do exterior painting for both businesses and homes',
+        icon: 'tabler:paint',
       },
       {
-        title: 'Responsive Design',
-        description: 'From desktops, to tablets, to phones, your website will fit screens of all sizes.',
-        icon: 'tabler:screen-share',
+        title: 'Interior Painting',
+        description: 'We do interior painting, helping you get the perfect color for all your walls',
+        icon: 'tabler:color-swatch',
       },
       {
-        title: 'Optimized Pages',
-        description: 'Our no-bloat designs lead to high scores when evaluated with website analysis tools.',
-        icon: 'tabler:bolt',
+        title: 'Cabinet Repainting',
+        description: 'Do you have cabinets that need work? We do that too!',
+        icon: 'tabler:brush',
       },
     ]}
   />
@@ -169,6 +160,45 @@ import Features3 from '~/components/widgets/Features3.astro';
       />
     </Fragment>
   </Content>
+
+  <Testimonials
+    title="Hear from our Customers"
+    testimonials={[
+      {
+        testimonial: `We hired Paint Pros to update the interior of our home, and we couldn’t be happier! The team was professional, detail-oriented, and left everything spotless. Our living room looks brand new, and the fresh color has completely transformed our space. Highly recommend them for any interior work!`,
+        name: 'Cary Kennedy',
+        job: 'Local Home',
+        image: {
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Cary Kennedy Image',
+        },
+      },
+      {
+        testimonial: `The crew did a fantastic job painting the exterior of our house. They were punctual, efficient, and the quality of their work is outstanding. Our house looks amazing, and we’ve already received so many compliments from neighbors. If you need exterior painting, this is the team to call!`,
+        name: 'Josh Wilkinson',
+        job: 'Local Home',
+        image: {
+          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Josh Wilkinson Image',
+        },
+      },
+      {
+        testimonial:
+          'We recently had our office repainted by this company, and they did a phenomenal job. They worked around our schedule to minimize disruptions, and the result was impeccable. The new paint has given our business a fresh, welcoming look. I couldn’t be more pleased with their work!',
+        name: 'Sidney Hansen',
+        job: 'Local Business',
+        image: {
+          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Sidney Hansen Image',
+        },
+      },
+    ]}
+    callToAction={{
+      text: 'See More Of Our Projects',
+      href: '/portfolio',
+      icon: 'tabler:chevron-right',      
+    }}
+  />
 
   <!-- CallToAction Widget *********** -->
   <FadeIn delay={300}>

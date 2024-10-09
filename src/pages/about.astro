@@ -10,6 +10,9 @@ import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
+import Image from '~/components/common/Image.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+
 const metadata = {
   title: 'About us',
 };
@@ -17,23 +20,34 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-  <HeroText tagline="">
-    <Fragment slot="title">
-      <div class="text-4xl">About Us</div>
-    </Fragment>
+  <div class="mt-44 lg:ml-10 mb-32">
+    <Hero2
+      tagline=""
+      image={{
+        src: 'https://images.pexels.com/photos/9222185/pexels-photo-9222185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        alt: 'Painting supplies',
+        width: '500',
+      }}
+    >
+      <Fragment slot="title">
+        <div class="text-4xl">About Us</div>
+      </Fragment>
 
-    <Fragment slot="subtitle">
-      We're a <span class="text-accent">small web dev business</span> with a passion for <span class="text-accent"
-        >handcrafting websites.</span
-      >
-      <br /> No page builders, no WordPress, no shortcuts. We code 100% of our websites, employing <span
-        class="text-accent">modern</span
-      > coding standards, and creating <span class="text-accent">fast</span> and <span class="text-accent"
-        >reponsive</span
-      > designs.
-    </Fragment>
-  </HeroText>
-
+      <Fragment slot="subtitle">
+        We're a <span class="text-[#ff5555]">family owned painting business</span> with a passion for <span
+          class="text-[#ff5555]">perfection.</span
+        >
+        <br /> At Paint Pros, we believe that every space deserves to look its best, whether it's a cozy home or a bustling
+        office. <br /><br /> With over 30 of experience in the painting industry, we’ve mastered the art of transforming
+        interiors and exteriors with precision, passion, and professionalism. Our team of skilled painters is dedicated to
+        delivering top-tier craftsmanship using premium materials, ensuring your property stands out with a flawless finish.
+        <br /><br />What sets us apart? We listen closely to your vision and bring it to life with meticulous attention
+        to detail. From color consultations to the final brushstroke, Paint Pros is committed to making your painting
+        project as smooth and stress-free as possible. Trust us to deliver excellence, on time and within budget, every
+        time.
+      </Fragment>
+    </Hero2>
+  </div>
   <!-- CallToAction Widget *********** -->
   <FadeIn delay={300}>
     <CallToAction>
@@ -42,7 +56,8 @@ const metadata = {
       </Fragment>
 
       <Fragment slot="title">
-        Ready for the website you always wanted?<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"></span>
+        Ready to add some color to your next project?<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"
+        ></span>
       </Fragment>
 
       <Fragment slot="subtitle">

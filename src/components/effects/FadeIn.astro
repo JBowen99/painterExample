@@ -1,16 +1,17 @@
 ---
 const { delay = '0', direction = 'none' } = Astro.props;
-const directionClasses = {
-  up: 'translate-y-32',
-  down: '-translate-y-32',
-  left: '-translate-x-32',
-  right: 'translate-x-32',
-  none: '',
-}[direction] || ''; // Default to 'up' if an invalid direction is passed
+const directionClasses =
+  {
+    up: 'translate-y-32',
+    down: '-translate-y-32',
+    left: '-translate-x-32',
+    right: 'translate-x-32',
+    none: '',
+  }[direction] || ''; // Default to 'up' if an invalid direction is passed
 ---
 
-<section 
-  class={`opacity-0 ${directionClasses} transition-all transform duration-1000 fade-element ease-out`} 
+<section
+  class={`opacity-0 ${directionClasses} transition-all transform duration-1000 fade-element ease-out`}
   style={`transition-delay: ${delay}ms;`}
 >
   <slot />
@@ -33,14 +34,20 @@ const directionClasses = {
 </script>
  -->
 
- <script>
+<script>
   const fadeElements = document.querySelectorAll('.fade-element');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         // Remove the translation and fade in
-        entry.target.classList.remove('opacity-0', 'translate-y-32', 'translate-x-32', '-translate-y-32', '-translate-x-32');
+        entry.target.classList.remove(
+          'opacity-0',
+          'translate-y-32',
+          'translate-x-32',
+          '-translate-y-32',
+          '-translate-x-32'
+        );
         entry.target.classList.add('opacity-100', 'translate-y-0', 'translate-x-0');
         observer.unobserve(entry.target); // Stop observing once visible
       }

@@ -28,7 +28,6 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 ---
 
 <Layout metadata={metadata}>
-
   <div class="flex flex-col justify-center w-full">
     <div class="relative z-10 p-4">
       <div class="flex justify-center mt-10">
@@ -38,7 +37,6 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
       </div>
 
       <HeroText>
-
         <Fragment slot="subtitle"><span class="text-lg font-nomral">Your Go-To Painter Professionals</span></Fragment>
       </HeroText>
 
@@ -49,156 +47,140 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
     </div>
   </div>
 
-  <br />
+  <div class="bg-gradient-to-tr from-[#ff3333] to-[#ff5555] relative pt-32">
+    <div class="custom-shape-divider-top-1728428340">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
 
-  <!-- Features2 Widget *************** -->
-  <Features2
-    id="features"
-    tagline=""
-    title="What We Do"
-    subtitle="Our team handcrafts modern, professional, and performant websites."
-    items={[
-      {
-        title: 'Exterior Painting',
-        description: 'We do exterior painting for both businesses and homes',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Interior Painting',
-        description: 'We do interior painting, helping you get the perfect color for all your walls',
-        icon: 'tabler:color-swatch',
-      },
-      {
-        title: 'Cabinet Repainting',
-        description: 'Do you have cabinets that need work? We do that too!',
-        icon: 'tabler:brush',
-      },
-    ]}
-  />
+    <div class="flex flex-col justify-center items-center pt-20 pb-20 space-y-5 w-full">
+      <FadeIn delay={300}>
+        <h1 class="text-4xl text-white">What We Do</h1>
+      </FadeIn>
 
-  <!-- Content Widget **************** -->
+      <div class="w-full p-5 lg:p-10">
+        <FadeIn delay={300} direction="left">
+          <div class="flex flex-col lg:flex-row justify-center items-center">
+            <div class="relative h-64 w-1/2 rounded-lg overflow-hidden shadow-lg lg:mr-44">
+              <!-- Background Image -->
+              <div
+                class="absolute inset-0 bg-cover bg-center contrast-50 bg-[url('https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]"
+              >
+              </div>
 
-  <Features
-    tagline=""
-    title="What We Offer"
-    items={[
-      {
-        title: 'Custom Designed',
-        description:
-          'Each website is coded by hand, no web builders or WordPress, leading to unique designs and less bloat',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'Fast Pages',
-        description: 'Custom code means that our websites load quickly and score 95-100/100 when evaluated with Google',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers and devices, delivering a seamless experience to all users.',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'Hosting and Support',
-        description: 'We can handle domain names, hosting, updates, and support. ',
-        icon: 'tabler:check',
-      },
-    ]}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Modern Businesses Need Modern Websites
-      </h3>
-      Stand out from competitors, gain new customers, and provide high quality experiences
-    </Fragment>
+              <!-- Overlay for text -->
+              <div class="relative z-10 flex flex-col h-full justify-center items-center text-center text-white px-4">
+                <h2 class="text-3xl font-bold mb-2">Interior Painting</h2>
+                <p class="text-sm"></p>
+              </div>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 shadow-lg rounded-xl mx-3 md:mx-10 mb-3 p-5 dark:bg-transparent"></div>
-    </Fragment>
-  </Features>
+              <!-- Optional gradient overlay -->
+              <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-40"></div>
+            </div>
+          </div>
+        </FadeIn>
+      </div>
 
-  <Content
-    tagline=""
-    title="Why It Matters"
-    items={[
-      {
-        title: 'User Retention',
-        description: 'Faster websites lead to more users, traffic, and conversion rates',
-        icon: 'tabler:users-group',
-      },
-      {
-        title: 'Better SEO',
-        description: 'Rank higher in Google searches with a faster website',
-        icon: 'tabler:trending-up',
-      },
-      {
-        title: 'Great Experience',
-        description: 'With a low load time, users are more likely to enjoy viewing your site',
-        icon: 'tabler:click',
-      },
-    ]}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Custom Websites Win</h3>
-      Stand out from competitors, gain new customers, and provide high quality experiences
-    </Fragment>
+      <div class="w-full p-5 lg:p-10">
+        <FadeIn delay={300} direction="right">
+          <div class="flex flex-col lg:flex-row justify-center items-center">
+            <div class="relative h-64 w-1/2 rounded-lg overflow-hidden shadow-lg lg:ml-44">
+              <!-- Background Image -->
+              <div
+                class="absolute inset-0 bg-cover bg-center contrast-50 bg-[url('https://images.pexels.com/photos/6473982/pexels-photo-6473982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]"
+              >
+              </div>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 shadow-lg rounded-xl mx-3 md:mx-10 p-5 dark:bg-transparent"></div>
-    </Fragment>
+              <!-- Overlay for text -->
+              <div class="relative z-10 flex flex-col h-full justify-center items-center text-center text-white px-4">
+                <h2 class="text-3xl font-bold mb-2">Exterior Painting</h2>
+                <p class="text-sm"></p>
+              </div>
 
-    <Fragment slot="image">
-      <Image
-        src={PerformanceImage}
-        class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
-        width={350}
-        height={400}
-        widths={[800]}
-        alt="Website Performance"
-        layout="cover"
+              <!-- Optional gradient overlay -->
+              <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-40"></div>
+            </div>
+          </div>
+        </FadeIn>
+      </div>
+
+      <div class="w-full p-5 lg:p-10">
+        <FadeIn delay={300} direction="left">
+          <div class="flex flex-col lg:flex-row justify-center items-center">
+            <div class="relative h-64 w-1/2 rounded-lg overflow-hidden shadow-lg lg:mr-44">
+              <!-- Background Image -->
+              <div
+                class="absolute inset-0 bg-cover bg-center contrast-50 bg-[url('https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]"
+              >
+              </div>
+
+              <!-- Overlay for text -->
+              <div class="relative z-10 flex flex-col h-full justify-center items-center text-center text-white px-4">
+                <h2 class="text-3xl font-bold mb-2">Commercial Painting</h2>
+                <p class="text-sm"></p>
+              </div>
+
+              <!-- Optional gradient overlay -->
+              <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-40"></div>
+            </div>
+          </div>
+        </FadeIn>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative">
+    <div class="custom-shape-divider-bottom-1728429303">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+    <FadeIn delay={300} direction="up">
+      <Testimonials
+        title="Hear from our Customers"
+        testimonials={[
+          {
+            testimonial: `We hired Paint Pros to update the interior of our home, and we couldn’t be happier! The team was professional, detail-oriented, and left everything spotless. Our living room looks brand new, and the fresh color has completely transformed our space. Highly recommend them for any interior work!`,
+            name: 'Cary Kennedy',
+            job: 'Local Home',
+            image: {
+              src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+              alt: 'Cary Kennedy Image',
+            },
+          },
+          {
+            testimonial: `The crew did a fantastic job painting the exterior of our house. They were punctual, efficient, and the quality of their work is outstanding. Our house looks amazing, and we’ve already received so many compliments from neighbors. If you need exterior painting, this is the team to call!`,
+            name: 'Josh Wilkinson',
+            job: 'Local Home',
+            image: {
+              src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+              alt: 'Josh Wilkinson Image',
+            },
+          },
+          {
+            testimonial:
+              'We recently had our office repainted by this company, and they did a phenomenal job. They worked around our schedule to minimize disruptions, and the result was impeccable. The new paint has given our business a fresh, welcoming look. I couldn’t be more pleased with their work!',
+            name: 'Sidney Hansen',
+            job: 'Local Business',
+            image: {
+              src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+              alt: 'Sidney Hansen Image',
+            },
+          },
+        ]}
+        callToAction={{
+          text: 'See More Of Our Projects',
+          href: '/portfolio',
+          icon: 'tabler:chevron-right',
+        }}
       />
-    </Fragment>
-  </Content>
-
-  <Testimonials
-    title="Hear from our Customers"
-    testimonials={[
-      {
-        testimonial: `We hired Paint Pros to update the interior of our home, and we couldn’t be happier! The team was professional, detail-oriented, and left everything spotless. Our living room looks brand new, and the fresh color has completely transformed our space. Highly recommend them for any interior work!`,
-        name: 'Cary Kennedy',
-        job: 'Local Home',
-        image: {
-          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Cary Kennedy Image',
-        },
-      },
-      {
-        testimonial: `The crew did a fantastic job painting the exterior of our house. They were punctual, efficient, and the quality of their work is outstanding. Our house looks amazing, and we’ve already received so many compliments from neighbors. If you need exterior painting, this is the team to call!`,
-        name: 'Josh Wilkinson',
-        job: 'Local Home',
-        image: {
-          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Josh Wilkinson Image',
-        },
-      },
-      {
-        testimonial:
-          'We recently had our office repainted by this company, and they did a phenomenal job. They worked around our schedule to minimize disruptions, and the result was impeccable. The new paint has given our business a fresh, welcoming look. I couldn’t be more pleased with their work!',
-        name: 'Sidney Hansen',
-        job: 'Local Business',
-        image: {
-          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Sidney Hansen Image',
-        },
-      },
-    ]}
-    callToAction={{
-      text: 'See More Of Our Projects',
-      href: '/portfolio',
-      icon: 'tabler:chevron-right',      
-    }}
-  />
+    </FadeIn>
+  </div>
 
   <!-- CallToAction Widget *********** -->
   <FadeIn delay={300}>
@@ -208,12 +190,56 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
       </Fragment>
 
       <Fragment slot="title">
-        Interested in a better website?<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"></span>
+        Ready to start your next project?<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"></span>
       </Fragment>
 
       <Fragment slot="subtitle">
-        Lets build something great together - Get started now!<br class="hidden md:inline" />
+        Contact us today for a free quote!<br class="hidden md:inline" />
       </Fragment>
     </CallToAction>
   </FadeIn>
 </Layout>
+
+<style>
+  .custom-shape-divider-top-1728428340 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-top-1728428340 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+  }
+
+  .custom-shape-divider-top-1728428340 .shape-fill {
+    fill: #ffffff;
+  }
+
+  .custom-shape-divider-bottom-1728429303 {
+    position: absolute;
+    top: -19%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom-1728429303 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+  }
+
+  .custom-shape-divider-bottom-1728429303 .shape-fill {
+    fill: #ffffff;
+  }
+</style>

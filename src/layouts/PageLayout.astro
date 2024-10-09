@@ -27,14 +27,14 @@ const links = [
 
 <Layout metadata={metadata}>
   <slot name="header">
-    <HeaderBusiness {...headerData} {...contactData} isSticky /> 
+    <HeaderBusiness {...headerData} {...contactData} isSticky />
     <!-- <FancyNavbar companyName="Silver Stag Studios" logo="true" isSticky={true} layout="left" links={links} /> -->
   </slot>
   <main>
     <slot />
   </main>
   <slot name="footer">
-    <Footer {...footerData} />
-    <!-- <FooterFull /> -->
+    <!-- <Footer {...footerData} />-->
+    <FooterFull />
   </slot>
 </Layout>

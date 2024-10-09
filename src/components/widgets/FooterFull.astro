@@ -2,23 +2,31 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<footer class="py-20 bg-slate-700 dark:bg-slate-900">
-  <div class="flex flex-col md:flex-row justify-between px-10 text-center text-md text-slate-300">
+<footer class="pt-20 pb-8 bg-[#ff5555] dark:bg-slate-900">
+  <div class="flex flex-col md:flex-row justify-between px-10 text-center text-md text-white">
+    <div class="flex flex-col items-start">
+      <p>
+        Copyright © {new Date().getFullYear()} Paint Pros. All rights reserved.
+      </p>
+      <p class="text-slate-200 text-sm">
+        <a href="/terms">Terms</a> | <a href="/privacy">Privacy Policy</a>
+      </p>
+    </div>
     <p>
-      Copyright © {new Date().getFullYear()} Silver Stag Studio. All rights reserved.
-    </p>
-    <p>
-      <div class="flex flex-row justify-center text-3xl space-x-5 pt-5 md:pt-0 md:pr-10">
+      <div class="flex flex-row justify-center text-3xl text-white space-x-5 pt-5 md:pt-0 md:pr-10">
         <a href="https://instagram.com">
           <Icon name="tabler:brand-instagram" />
         </a>
-        <a href="facebook.com">
+        <a href="https://facebook.com">
           <Icon name="tabler:brand-facebook" />
         </a>
-        <a href="instagram.com">
+        <a href="https://x.com">
           <Icon name="tabler:brand-x" />
         </a>
       </div>
     </p>
+  </div>
+  <div class="text-center pt-10 text-white text-sm">
+    <h1>Site by <a href="www.silverstagstudios.com">Silver Stag Studios</a></h1>
   </div>
 </footer>
